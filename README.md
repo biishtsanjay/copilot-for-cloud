@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+WORKING DEMO DEPLOYED ON VERCEL: https://copilot-for-cloud.vercel.app/
+
 ## GETTING STARTED:
 (node v18+) || 
 Do -> npm install || 
