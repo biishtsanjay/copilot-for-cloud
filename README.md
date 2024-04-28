@@ -9,8 +9,8 @@ Do -> npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## PACKAGES USED (all the latest versions of):
-Tailwind CSS
-recharts -> for pie chart
-react-chart-js -> for sankey chart
-react-icons -> for icons
+Tailwind CSS || 
+recharts -> for pie chart || 
+react-chart-js -> for sankey chart || 
+react-icons -> for icons || 
 
