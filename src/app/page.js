@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-between items-center w-full h-screen pb-4 pt-6 px-4">
-      {showSecondScreen ? (
+      {!showSecondScreen ? (
         <div className="mt-auto mb-[5rem]">
           <FirstFrame showSecondStep={() => setShowSecondScreen(true)} />
         </div>

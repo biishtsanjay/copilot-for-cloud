@@ -11,8 +11,8 @@ const ProcessingWidget = ({ text, delay = 2000, nextLoad = () => {} }) => {
   }, delay);
 
   return (
-    <div className="flex justify-between  items-center w-full h-14 mb-4 mt-4  flex-shrink-0 rounded-[16px] bg-[#F1F3F9] text-[14px]">
-      <div className="flex items-center">
+    <div className="flex justify-between items-center w-full h-14 mb-4  rounded-[16px] bg-[#F1F3F9] text-[14px]">
+      <div className="flex items-center w-[95%]">
         <IoIosCloudy size="20px" className="ml-4 mr-4" />
         <span className="w-[90%]">{text}</span>
       </div>

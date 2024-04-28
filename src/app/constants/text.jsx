@@ -16,6 +16,7 @@ export const FirstFrameQ = [
     disabled: true,
   },
 ];
+
 export const SecondFrameQ = [
   {
     text: "Which services cost are rising the fastest?",
@@ -35,6 +36,25 @@ export const SecondFrameQ = [
   },
 ];
 
+export const ThirdFrameQ = [
+  {
+    text: "Which services cost are rising the fastest?",
+    disabled: true,
+  },
+  {
+    text: "How can I reduce my S3 costs?",
+    disabled: true,
+  },
+  {
+    text: "How can I reduce my RDS costs?",
+    disabled: true,
+  },
+  {
+    text: "Why are EC2 costs increasing so much?",
+    disabled: false,
+  },
+];
+
 export const DonutData = [
   { name: "EC2", value: 30 },
   { name: "RDS", value: 20 },
@@ -42,6 +62,24 @@ export const DonutData = [
   { name: "OpenSearch", value: 10 },
   { name: "ElasticCache", value: 10 },
   { name: "Others", value: 10 },
+];
+
+export const SankeyData = [
+  ["From", "To", "Weight"],
+  ["Excess Costs: 2,500", "Production: 2,000", 2000],
+  ["Excess Costs: 2,500", "Staging: 300", 300],
+  ["Excess Costs: 2,500", "Analytics: 200", 200],
+  ["Production: 2,000", "Purpose: 800", 800],
+  ["Production: 2,000", "Customers: 600", 600],
+  ["Production: 2,000", "Product: 600", 600],
+  ["Purpose: 800", "Web App: 700", 700],
+  ["Purpose: 800", "Api: 240", 240],
+  ["Purpose: 800", "Workflow: 160", 160],
+  ["Customers: 600", "Amex", 420],
+  ["Customers: 600", "Citi", 180],
+  ["Product: 600", "Web App", 700],
+  ["Product: 600", "Mobile App", 180],
+  ["Product: 600", "Chat", 120],
 ];
 
 export const IFRAME_SOURCE =
@@ -58,3 +96,61 @@ export const savingDetail = [
   },
 ];
 export const MIGHT_KNOW_TEXT = "You might also want to know";
+export const AccumulatedCostText =
+  "`Your production account (#24542) has accumulated costs of $100,000 over the past month, here is a spread of cloud costs by services;`";
+export const SavingAreas = `You can save $2500 per month overall in EC2 costs. Click here to access a detailed report. Here are your top 2 saving areas:`;
+export const ProductionAccountText =
+  "Your production account (#24542) has accumulated costs of $100,000 over the past month, here is a spread of cloud costs by services;";
+
+export const SQLData = [
+  "1. SELECT",
+  "2. service,",
+  "3. SUM(cost) AS total_cost",
+  " 4. FROM",
+  "5. cloud_costs",
+  "6. WHERE",
+  " 7. account_type = 'production (#24542)'",
+  "8. GROUP BY",
+];
+
+// EXTRAS
+
+// // Ref to access the iframe content
+// const iframeRef = useRef(null);
+
+// // SQL code to display
+// const sqlCode = `SELECT
+//                       service,
+//                       SUM(cost) AS total_cost
+//                   FROM
+//                       cloud_costs
+//                   WHERE
+//                       account_type = 'production (#24542)'
+//                   GROUP BY
+//                       service`;
+
+// useEffect(() => {
+//   if (iframeRef.current) {
+//     setIframeReady(true);
+//   }
+// }, [isSQLProcessing]);
+
+// useEffect(() => {
+//   if (iframeReady) {
+//     const iframeDocument = iframeRef.current.contentDocument;
+//     if (iframeDocument) {
+//       iframeDocument.write("<pre>" + sqlCode + "</pre>");
+//     }
+//   }
+// }, [iframeReady, sqlCode, isSQLProcessing]);
+
+// body={<IFrame src={IFRAME_SOURCE} />}
+// body={
+// <iframe
+//   onLoad={() => setIframeReady(true)}
+//   ref={iframeRef}
+//   title="sqlCode"
+//   width="100%"
+//   height="200"
+// ></iframe>
+// }

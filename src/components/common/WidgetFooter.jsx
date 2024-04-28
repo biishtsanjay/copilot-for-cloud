@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { TfiReload } from "react-icons/tfi";
 import { IoCopyOutline } from "react-icons/io5";
 import { CiExport } from "react-icons/ci";
-import { MIGHT_KNOW_TEXT, SecondFrameQ } from "@/app/constants/text";
-import { useWidgetToggle } from "@/app/utils/useWidgetToggle";
+import { MIGHT_KNOW_TEXT } from "@/app/constants/text";
+import { useWidgetToggle } from "@/app/customHooks/useWidgetToggle";
 import { IoIosArrowUp } from "react-icons/io";
 import QuestionsFrame from "./QuestionsFrame";
 
@@ -71,7 +71,7 @@ const WidgetFooter = ({
       {mightWant && afterDelay && (
         <>
           <div
-            className="flex justify-between bg-[#F1F3F9]  rounded-t-xl"
+            className="flex justify-between bg-[#F1F3F9] rounded-t-xl"
             onClick={toggleWidget}
           >
             <span className="m-4 whitespace-nowrap">{MIGHT_KNOW_TEXT}</span>
@@ -80,7 +80,10 @@ const WidgetFooter = ({
           </div>
 
           <div className="w-full ml-[2rem]">
-            <QuestionsFrame questions={SecondFrameQ} onClickButton />
+            <QuestionsFrame
+              questions={questions}
+              onClickButton={onClickButton}
+            />
           </div>
         </>
       )}
