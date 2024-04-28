@@ -9,7 +9,11 @@ const QuestionsButton = ({ onClick, question }) => {
       onClick={onClick}
       disabled={question.disabled}
     >
-      <span className="text-[12px] text-[#373C43] font-normal text-[#777]">
+      <span
+        className={`text-[12px] text-[#373C43] font-normal ${
+          question.disabled ? "text-[#b4b2b2]" : "text-[#777]"
+        }`}
+      >
         {question.text}
       </span>
     </button>

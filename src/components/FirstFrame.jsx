@@ -5,7 +5,7 @@ import { FirstFrameQ } from "@/app/constants/text";
 const FirstFrame = ({ showSecondStep }) => {
   return (
     <div>
-      <QuestionsFrame questions={FirstFrameQ} onClick={showSecondStep} />
+      <QuestionsFrame questions={FirstFrameQ} onClickButton={showSecondStep} />
     </div>
   );
 };
